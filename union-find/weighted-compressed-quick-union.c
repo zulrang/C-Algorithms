@@ -3,8 +3,9 @@
 #define N 10000
 
 int main() {
+	// uses approx. 4(2N + 4) bytes of memory on 32 and 64-bit architecture (about 78k for 10000)
 	int id[N], sz[N], i, j, p, q;
-	
+
 	// initialize array
 	for(i=0; i<N; i++) { id[i] = i; sz[i] = 1; }
 
