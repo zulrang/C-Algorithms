@@ -9,7 +9,7 @@ int main() {
 	for(i=0; i<N; i++) { id[i] = i; sz[i] = 1; }
 
 	while(scanf("%d %d\n", &p, &q) == 2) {
-		// get the root node of each input
+		// get the root node of each input and compress each node to their parent
 		for(i = p; i != id[i]; i = id[i]) id[i] = id[id[i]];
 		for(j = q; j != id[j]; j = id[j]) id[j] = id[id[j]];
 		if (i == j) continue; // same root node, already connected
