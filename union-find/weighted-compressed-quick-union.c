@@ -6,7 +6,7 @@ int main() {
 	// uses approx. 4(2N + 4) bytes of memory on 32 and 64-bit architecture (about 78k for 10000)
 	int id[N], sz[N], i, j, p, q;
 
-	// initialize array
+	// initialize arrays
 	for(i=0; i<N; i++) { id[i] = i; sz[i] = 1; }
 
 	while(scanf("%d %d\n", &p, &q) == 2) {
@@ -23,8 +23,7 @@ int main() {
 			id[j] = i; // set root of j to i
 			sz[i] += sz[j]; // add size of j to i
 		}
-		printf(" %d %d", p, q);
-		printf("\n");
+		printf(" %d %d\n", p, q);
 	}
 
 	return 0;
